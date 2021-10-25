@@ -32,15 +32,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="apple-touch-icon" sizes="76x76" href="<?= $base_url ?>templates/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?= $base_url ?>templates/assets/img/favicon.png">
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/supakjack/check-3-files/main/frontend/src/assets/hh-logo.jpeg">
 
   <title>
-
-
-
-    Material Kit 2 by Creative Tim
-
-
+    12 แฟ้มประมวลผล .DBF
   </title>
 
 
@@ -153,6 +148,7 @@
 </html>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
   * {
     font-family: 'Prompt', sans-serif;
   }
