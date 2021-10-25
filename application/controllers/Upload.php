@@ -41,8 +41,6 @@ class Upload extends CI_Controller
                         $dbf_config = $report->dbf;
                     }
                 }
-                var_dump(" $dbf_config : " . $dbf_config);
-                echo '<br>';
                 $dbf_config_new = explode("YYMM", $dbf_config)[0];
                 $dbf_config_new = $dbf_config_new . $code . ".dbf";
                 $tempPath = "./uploads/" . $new_path . "/" . $dbf_config_new;
