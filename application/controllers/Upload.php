@@ -16,9 +16,6 @@ class Upload extends CI_Controller
 
     public function convert_to_dbf()
     {
-        // $array_error = [
-        //     'INSyymm.txt' => ['DATEIN' => [], 'DATEEXP' => []]
-        // ];
         $this->load->helper('url');
         $this->load->helper('download');
         $this->load->library('zip');
@@ -58,7 +55,7 @@ class Upload extends CI_Controller
                                 $columns = explode('|', $members[0]);
                                 if ($text_config == "CHAyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -66,7 +63,7 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "CHTyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -75,36 +72,14 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "IDXyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3])
                                     ]);
                                 } else if ($text_config == "INSyymm.txt") {
-
-                                    // if (empty($columns[4])) {
-                                    //     array_push($array_error['INSyymm.txt']['DATEIN'], "ไม่พบข้อมูล DATEIN ในไฟล์ INSyymm ที่ HN : " . $columns[0]);
-                                    // }
-
-                                    // if (isset($columns[5]) && (int)substr($columns[5], 0, 4) > date("Y") + 2) {
-                                    //     array_push($array_error['INSyymm.txt']['DATEEXP'], "พบ DATEEXP ผิดปกติ ในไฟล์ INSyymm ที่ HN : " . $columns[5] . " , DATEEXP : " . substr($columns[5], 0, 4));
-                                    // }
-
-                                    // echo "<pre>";
-                                    // var_dump(
-                                    //     trim($columns[0]),
-                                    //     trim(trim($columns[1])),
-                                    //     trim(trim($columns[)2]),
-                                    //     trim(trim($columns[3])),
-                                    //     trim(trim($columns[)4]),
-                                    //     trim(trim($columns[5])),
-                                    //     trim(trim($columns[6])),
-                                    //     trim(trim($columns[7]))
-                                    // );
-                                    // die;
-
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -115,7 +90,7 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "IOPyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -126,7 +101,7 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "IPDyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -140,13 +115,13 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "IRFyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2])
                                     ]);
                                 } else if ($text_config == "ODXyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -155,7 +130,7 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "OOPyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -163,13 +138,13 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "OPDyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2])
                                     ]);
                                 } else if ($text_config == "ORFyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -177,7 +152,7 @@ class Upload extends CI_Controller
                                     ]);
                                 } else if ($text_config == "PATyymm.txt") {
                                     dbase_add_record($db, [
-                                       trim($columns[0]),
+                                        trim($columns[0]),
                                         trim($columns[1]),
                                         trim($columns[2]),
                                         trim($columns[3]),
@@ -199,9 +174,7 @@ class Upload extends CI_Controller
                 }
             }
         }
-        // redirect(base_url() . 'Upload/index/' . $new_path);
         $this->load->view('v_main', [
-            // 'array_error' => $array_error,
             'base_url' => base_url(),
             'body' => 'v_upload',
             'new_path' => $new_path
